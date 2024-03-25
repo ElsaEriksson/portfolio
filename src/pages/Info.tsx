@@ -42,7 +42,10 @@ export const Info = () => {
               className="container--WebsiteLink"
               onClick={(e) => {
                 e.preventDefault();
-                window.open("public/CV_ElsaEriksson_En.pdf", "_blank");
+                window.open(
+                  "https://elsasportfolio.netlify.app/CV_ElsaEriksson_En.pdf",
+                  "_blank"
+                );
               }}
             >
               <span className="websiteLink">Resume</span>
