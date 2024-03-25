@@ -12,7 +12,7 @@ export const Layout = () => {
         "1",
         2023,
         "School project",
-        "/public/naturesite.png",
+        "https://elsasportfolio.netlify.app/Projects/1/src/naturesite/naturesite.png",
         "REPLICATE DESIGN",
         "Made at medieinstitutet by Elsa Eriksson",
         "For this school assignment, I created a responsive website utilizing flex/grid to organize the layout of key pages such as the homepage, about page, and contact page. The goal was to closely emulate the design and functionality of an established web page.",
