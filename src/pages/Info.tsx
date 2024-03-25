@@ -42,7 +42,7 @@ export const Info = () => {
               className="container--WebsiteLink"
               onClick={(e) => {
                 e.preventDefault();
-                window.open("src/assets/CV_ElsaEriksson_En.pdf", "_blank");
+                window.open("public/CV_ElsaEriksson_En.pdf", "_blank");
               }}
             >
               <span className="websiteLink">Resume</span>
