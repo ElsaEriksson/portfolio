@@ -6,7 +6,7 @@ import { IProjectsContext, ProjectsContext } from "./contexts/ProjectsContext";
 import { Project } from "./models/Project";
 
 export const Layout = () => {
-  const [projectsList, setProjectsList] = useState<IProjectsContext>({
+  const [projectsList] = useState<IProjectsContext>({
     projects: [
       new Project(
         "1",
