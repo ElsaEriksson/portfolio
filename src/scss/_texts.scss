@@ -1,0 +1,278 @@
+@use "mixins";
+
+.professionalTitle {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.personalName {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-family: "Bodoni Moda";
+  font-size: 2.1rem;
+  font-weight: 600;
+  font-stretch: semi-expanded;
+}
+
+.menueLink {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#themeTextRed {
+  margin-top: 12px;
+}
+
+.projectDescription {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.madeByText {
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.builtWith {
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.typeAndYearText {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+.projectTitleList {
+  font-size: 1.45rem;
+  font-weight: 300;
+}
+
+.typeAndYearTextList {
+  padding-right: 26%;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.homePageText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 6.5px;
+  padding-left: 16px;
+}
+
+.infoPageText {
+  width: 90%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.infoPageTitle {
+  width: 80%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.mailInInfo {
+  color: black;
+}
+
+.contactPageText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 6px;
+}
+
+.contactPageIcon {
+  font-size: 1.1rem;
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.container--navigationMenue {
+  @include mixins.devices(tablet) {
+    .menueLink {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.container--title {
+  @include mixins.devices(tablet) {
+    .professionalTitle {
+      font-size: 1.3rem;
+    }
+
+    .personalName {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.container--mainContent {
+  @include mixins.devices(tablet) {
+    .mainContent {
+      .homePageText {
+        font-size: 1.05rem;
+      }
+      .projectDescription {
+        font-size: 0.9rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .projectTitle {
+        font-size: 1.3rem;
+      }
+      .typeAndYearText {
+        font-size: 0.8rem;
+      }
+      .backButtonText,
+      .backButtonArrows,
+      #arrow1,
+      #arrow2,
+      #arrow3 {
+        font-size: 1rem;
+      }
+      .madeByText {
+        font-size: 1rem;
+      }
+      .projectDescription {
+        font-size: 1rem;
+      }
+      .builtWith {
+        font-size: 1rem;
+      }
+      .projectTitleList {
+        font-size: 2.2rem;
+      }
+
+      .typeAndYearTextList {
+        font-size: 1rem;
+        padding-right: 25.6%;
+      }
+      .infoPageTitle,
+      .infoPageText {
+        width: 100%;
+        font-size: 1.2rem;
+      }
+      .contactPageText {
+        font-size: 1.2rem;
+      }
+
+      .contactPageIcon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.container--theme {
+  @include mixins.devices(tablet) {
+    .themeTexts {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.container--navigationMenue {
+  @include mixins.devices(desktop) {
+    .menueLink {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.container--title {
+  @include mixins.devices(desktop) {
+    .professionalTitle {
+      font-size: 1rem;
+    }
+
+    .personalName {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+.container--mainContent {
+  @include mixins.devices(desktop) {
+    .mainContent {
+      .homePageText {
+        font-size: 0.8rem;
+      }
+      .projectDescription {
+        width: 65%;
+      }
+      .projectTitle {
+        font-size: 1.3rem;
+      }
+      .typeAndYearText {
+        font-size: 0.8rem;
+      }
+      .backButtonText,
+      .backButtonArrows,
+      #arrow1,
+      #arrow2,
+      #arrow3 {
+        font-size: 0.8rem;
+      }
+      .madeByText {
+        font-size: 0.8rem;
+      }
+      .projectDescription {
+        font-size: 0.8rem;
+      }
+      .builtWith {
+        font-size: 0.8rem;
+      }
+      .projectTitleList {
+        font-size: 1.6rem;
+      }
+      .typeAndYearTextList {
+        font-size: 0.7rem;
+      }
+      .infoPageTitle,
+      .infoPageText {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+      .contactPageText {
+        font-size: 0.8rem;
+      }
+
+      .contactPageIcon {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.container--theme {
+  @include mixins.devices(desktop) {
+    .themeTexts {
+      font-size: 1rem;
+    }
+  }
+}

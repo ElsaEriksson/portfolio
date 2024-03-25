@@ -1,0 +1,23 @@
+@use "mixins";
+
+.theme--line {
+  @include mixins.vertical-line(97%, 0px);
+}
+
+.nav--line {
+  @include mixins.horizontal-line(110px);
+}
+
+.titleLine {
+  @include mixins.horizontal-line(410px);
+  transform: translateX(-1px);
+}
+
+.container--dotAndLineList {
+  @include mixins.devices(tablet) {
+    .titleLine {
+      @include mixins.horizontal-line(550px);
+      transform: translateX(-1px);
+    }
+  }
+}

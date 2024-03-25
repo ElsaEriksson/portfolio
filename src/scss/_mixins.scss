@@ -1,0 +1,32 @@
+@mixin flex($direction, $position, $items, $negativespace) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $position;
+  align-items: $items;
+  gap: $negativespace;
+}
+
+@mixin horizontal-line($size) {
+  border-top: 1px solid #000000;
+  width: $size;
+}
+
+@mixin vertical-line($size, $left) {
+  border-left: 1px solid #000000;
+  height: $size;
+  margin-left: $left;
+}
+
+@mixin devices($breakpoint) {
+  @if $breakpoint ==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}

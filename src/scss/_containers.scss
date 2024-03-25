@@ -1,0 +1,295 @@
+@use "mixins";
+
+.container--theme {
+  height: 100vh;
+  width: 35px;
+  position: absolute;
+  @include mixins.flex(row, right, left, 0px);
+  .themes {
+    @include mixins.flex(row, left, center, 10px);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    height: 96%;
+    .square {
+      height: 9px;
+      width: 9px;
+      border: 1px solid black;
+    }
+  }
+  .themeLineDot {
+    @include mixins.flex(column, right, center, 0px);
+    height: 100vh;
+    width: 5px;
+  }
+}
+
+.container--title {
+  position: relative;
+  left: 52px;
+  top: 20px;
+}
+
+.container--navigationMenue {
+  position: absolute;
+  padding-top: 20px;
+  transform: translateX(-60px);
+  z-index: 1000;
+  .container--navigationList {
+    @include mixins.flex(column, center, left, 10px);
+    padding: 0;
+  }
+}
+
+.container--navigationOption {
+  @include mixins.flex(row, left, center, 2px);
+}
+
+.container--mainContent {
+  height: 97%;
+  width: 100%;
+  .mainContent {
+    height: 100%;
+    @include mixins.flex(column, end, end, 0px);
+  }
+}
+
+.container--lineDot {
+  @include mixins.flex(row, left, center, 0px);
+}
+
+.container--contactPage {
+  width: 100%;
+  .container--contactPageContent {
+    width: 55%;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 6.5px;
+    .container--contactPageContent__gitHub,
+    .container--contactPageContent__linkedin,
+    .container--contactPageContent__instagram,
+    .container--contactPageContent__email {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.container--homePageContent {
+  width: 65%;
+  padding-left: 35px;
+}
+
+#container--infoPage {
+  height: 65vh;
+  @include mixins.flex(column, end, end, 0px);
+}
+
+.container--infoPageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 6.5px;
+  padding-left: 55px;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  // @include mixins.flex(column, end, left, 0px);
+}
+
+.container--listOfProjects {
+  height: 100%;
+  @include mixins.flex(column, end, center, 25px);
+  padding-bottom: 50px;
+  transform: translateX(12%);
+  .container--oneProjectInList {
+    @include mixins.flex(column, center, end, 0px);
+    .container--projectTitle {
+      @include mixins.flex(row, end, center, 3px);
+      .container--dotAndLineList {
+        width: 25%;
+        @include mixins.flex(row, center, center, 0px);
+      }
+    }
+  }
+}
+
+.container--project {
+  padding-right: 10px;
+  height: 67%;
+  width: 80%;
+  @include mixins.flex(column, end, end, 2px);
+}
+
+.container--projetTitle {
+  width: 100%;
+  padding-top: 10px;
+  @include mixins.flex(row, right, center, 5px);
+  .container--dotAndLine {
+    width: 25px;
+    position: absolute;
+    right: 0%;
+  }
+}
+
+.container--dotAndLine {
+  height: 100%;
+  width: 100%;
+  @include mixins.flex(row, right, center, 0px);
+}
+
+.container--image {
+  width: fit-content;
+  padding-top: 25px;
+  overflow: hidden;
+  @include mixins.flex(column, end, center, 0px);
+}
+
+.container--text__aboveImage {
+  padding-bottom: 8px;
+  width: 100%;
+  @include mixins.flex(row, space-between, "", 0px);
+}
+
+.container--image img {
+  max-width: 100%;
+  max-height: 100%;
+  // border: 2px solid rgb(85, 95, 77);
+}
+
+.backButton {
+  @include mixins.flex(row, center, center, 6px);
+  font-size: 0.8rem;
+  cursor: pointer;
+  .backButtonText,
+  .backButtonArrows,
+  #arrow1,
+  #arrow2,
+  #arrow3 {
+    font-size: 0.8rem;
+    @include mixins.flex(row, center, center, 0px);
+  }
+  .backButtonArrows,
+  #arrow1,
+  #arrow2,
+  #arrow3 {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.container--links {
+  height: 30px;
+  @include mixins.flex(row, right, "", 10px);
+  margin-top: 15px;
+}
+
+.websiteLink,
+.codeLink,
+.websiteArrow,
+.codeLinkArrow {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.container--codeLink,
+.container--WebsiteLink {
+  min-height: 25px;
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  @include mixins.flex(row, center, center, 3px);
+}
+
+.fa-solid {
+  transform: rotate(45deg);
+}
+
+// @media screen and (max-height: 600px) {
+//   .container--mainContent {
+//     height: auto; /* Ändra höjden till auto vid mindre skärmar */
+//   }
+
+//   .mainContent.show {
+//     align-items: center; /* Justera tillbaka för att centrera innehållet vertikalt */
+//   }
+// }
+
+.container--navigationMenue {
+  @include mixins.devices(tablet) {
+    .container--navigationList {
+      @include mixins.flex(column, center, left, 18px);
+    }
+  }
+}
+
+.container--mainContent {
+  @include mixins.devices(tablet) {
+    .mainContent {
+      .container--project {
+        height: 85%;
+        padding-top: 38px;
+        width: 76%;
+        .container--image {
+          padding-top: 25px;
+        }
+        .container--projetTitle {
+          padding-top: 20px;
+        }
+      }
+    }
+    .container--homePageContent {
+      width: 40%;
+    }
+    .container--listOfProjects {
+      @include mixins.flex(column, end, center, 35px);
+    }
+    .container--infoPageContent {
+      width: 50%;
+      padding-right: 35px;
+    }
+    .container--contactPageContent {
+      gap: 12px;
+    }
+  }
+}
+
+.container--navigationMenue {
+  @include mixins.devices(desktop) {
+    .container--navigationList {
+      @include mixins.flex(column, center, left, 14px);
+    }
+  }
+}
+
+.container--mainContent {
+  @include mixins.devices(desktop) {
+    .mainContent {
+      .container--project {
+        min-height: 95%;
+      }
+      .container--homePageContent {
+        width: 25%;
+      }
+      .container--listOfProjects {
+        padding-bottom: 80px;
+      }
+      .container--infoPageContent {
+        width: 30%;
+        gap: 25px;
+      }
+      .container--contactPageContent {
+        gap: 8px;
+      }
+      #container--infoPage {
+        height: 80vh;
+      }
+    }
+  }
+}

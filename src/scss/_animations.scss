@@ -1,0 +1,143 @@
+@use "mixins";
+
+@keyframes transformer {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes transformerReverse {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeInProject {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInProjectList {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateX(12%);
+  }
+}
+
+@keyframes fadeContactPage {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInfoPage {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrowfade1 {
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slinga2 {
+  20% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slinga3 {
+  50% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.2;
+  }
+}
+
+.container--navigationOption:hover {
+  animation: transformer 0.3s forwards;
+}
+
+.container--navigationOption.selected {
+  transform: translateX(10px);
+}
+
+.container--oneProjectInList:hover {
+  animation: transformerReverse 0.3s forwards;
+  cursor: pointer;
+  // .titleLine {
+  //   width: 100%;
+  // }
+}
+
+.menueLink.active {
+  text-decoration: underline;
+}
+
+.container--listOfProjects {
+  animation: fadeInProjectList 0.2s;
+}
+
+.container--project {
+  animation: fadeInProject 0.2s;
+}
+
+#arrow1 {
+  animation: slinga3 2s infinite linear;
+}
+
+#arrow2 {
+  animation: slinga2 2s infinite linear;
+}
+
+#arrow3 {
+  animation: arrowfade1 2s infinite linear;
+}
+
+.container--contactPage,
+.container--homePageContent {
+  animation: fadeContactPage 0.1s;
+}
+
+.container--infoPageContent {
+  animation: fadeInfoPage 0.1s;
+}
