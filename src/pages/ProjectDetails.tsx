@@ -59,11 +59,14 @@ export const ProjectDetails = () => {
           <p className="builtWith">{project?.builtWith}</p>
           <section className="container--links">
             <section
-              className="container--WebsiteLink"
+              className={`container--WebsiteLink${
+                project?.title === "THE CHAT" ? "inactive" : ""
+              }`}
               onClick={(e) => {
                 e.preventDefault();
-                if (project?.project) {
-                  window.open(project.project, "_blank");
+                if (project?.project === "http//:...") {
+                } else {
+                  window.open(project?.project, "_blank");
                 }
               }}
             >

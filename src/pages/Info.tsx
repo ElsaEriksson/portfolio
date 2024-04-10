@@ -9,9 +9,8 @@ export const Info = () => {
               Right now, I am actively pursuing a full-time 10-week internship
               in web development for the autumn of 2024. I am looking for a
               place to apply my skills and continue to learn and grow within the
-              industry. I am particularly interested in working in back-end. If
-              you are interested in discussing internship opportunities, please
-              feel free to contact me at{" "}
+              industry. If you are interested in discussing internship
+              opportunities, please feel free to contact me at{" "}
               <a
                 href="mailto:elsa.eriksson@medieinstitutet.se"
                 target="_blank"
